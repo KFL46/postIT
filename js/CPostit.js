@@ -7,8 +7,8 @@ class postIt {
     vitesse;
     constructor(couleur, largeur, hauteur, couleurText, texts, vitesse){
         this.couleur = couleur;
-        this.largeur = x;
-        this.hauteur = y;
+        this.largeur = largeur;
+        this.hauteur = hauteur;
         this.couleurText = couleurText;
         this.texts = texts;
         this.vitesse = vitesse;
@@ -39,5 +39,5 @@ class postIt {
         document.body.appendChild(monElem);
     }
 }
-monPostIt = new postIt(100, 200, 30, 'red');
+monPostIt = new postIt(100, 200, 30, 'red', '', '');
 monPostIt.afficheTest();

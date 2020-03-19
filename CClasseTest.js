@@ -39,5 +39,5 @@ class ClasseTest {
     }
 }
 
-monTest = new ClasseTest(100, 200, 30, 'red');
+monTest = new ClasseTest(100, 200, 30, 'red', '', '');
 monTest.afficheTest();
