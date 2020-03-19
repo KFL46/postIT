@@ -28,8 +28,8 @@ class postIt {
     afficheTest() {
         let monElem = document.createElement('div')
         monElem.style.position = "fixed";
-        monElem.style.top = this.y + "px";
-        monElem.style.left = this.x + "px";
+        monElem.style.top = this.hauteur + "px";
+        monElem.style.left = this.largeur + "px";
         monElem.style.width = "150px";
         monElem.style.height = "150px";
         monElem.style.backgroundColor = this.couleur;
@@ -39,5 +39,5 @@ class postIt {
         document.body.appendChild(monElem);
     }
 }
-monTest = new postIt(100, 200, 30, 'red');
-monTest.afficheTest();
+monPostIt = new postIt(100, 200, 30, 'red');
+monPostIt.afficheTest();
