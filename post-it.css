@@ -1,0 +1,14 @@
+body{
+    background-color: #ecf0f1;
+    overflow: hidden;
+}
+.topBar{
+    z-index: 1;
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background-color: #f1c40f;
+}
+.textAria:focus{
+    outline: 0;
+}
