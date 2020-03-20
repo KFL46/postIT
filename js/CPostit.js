@@ -35,22 +35,22 @@ class postIt {
             
                 afficheTest() {
                     let monElem = document.createElement('div');
-                    let monElem;
                     let creation = false;
                     //mon postIT existe ?
-                    if(this.document.getElementById("postIT")== null){
+                    if(this.document.getElementById("vroum")== null){
                         monElem = this.document.createElement('div');
                         creation = true;
                         }
                     else{
                         //oui on la récupère
                         console.log(" Mon post It")
-                        monElem = document.getElementById("postIT");
+                        monElem = document.getElementById("postIt");
                         }   
-                }
+                
                     monElem.style.position = "fixed";
                     monElem.style.top = this.hauteur + "px";
                     monElem.style.left = this.largeur + "px";
+                    monElem.id = "vroum"
                     monElem.style.top = this.posY + "px";
                     monElem.style.left = this.posX + "px";
                     monElem.style.width = "150px";
@@ -69,11 +69,11 @@ class postIt {
                         onBouge = true;
                             })
                             
-                    //Si ma voiture n'existe pas je l'ajoute au html
+                    //Si mon postIt n'existe pas je l'ajoute au html
                     if (creation) {
                         document.body.appendChild(monElem);
                     }
-                
-    monPostIt = new postIt( 'red', 100, 200, 'white', '', 30);
-    monPostIt.affichePostIt();
-                }
+                }  
+            }             
+    monpostIt = new postIt( 'red', 100, 200, 'white', '', 30);
+    monpostIt.afficheTest();

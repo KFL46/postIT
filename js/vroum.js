@@ -2,7 +2,7 @@ let onBouge = false;
 let x;
 let y;
 
-let postIT = new postIT("voiture.jpg", 50, 50, 12);
+let monpostIt = new postIt("voiture.jpg", 50, 50, 12);
 monpostIt.afficheTest();
 
 document.addEventListener('mousemove', e => {
