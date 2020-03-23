@@ -2,26 +2,22 @@ class postIt {
             couleur;
             largeur;
             hauteur;
-            couleurText;
-            texts;
-            vitesse;
-            positionx;
-            positiony;
-            image;
-            constructor(couleur, largeur, hauteur, couleurText, texts){
+            text;
+            constructor(couleur, largeur, hauteur, text){
                 this.couleur = couleur;
                 this.largeur = largeur;
                 this.hauteur = hauteur;
-                this.couleurText = couleurText;
-                this.texts = texts;
+                this.text = text;
             }
-        
         changePlace(x, y) {
             this.largeur = x;
             this.hauteur = y;
-            this.positionx = x;
-            this.positiony = y;
-                                  
+            this.posx = x;
+            this.posy = y;
+        }
+        changeCouleur(coul) {
+            this.couleur=coul;
+        }
                 afficheTest(){
                     let monElem = document.createElement('div')
                     let monElem;
@@ -37,7 +33,7 @@ class postIt {
                         console.log(" Mon post It");
                         monElem = document.getElementById("postIt");
                         }   
-                    }
+              
                     monElem.style.position = "fixed";
                     monElem.style.top = this.hauteur + "px";
                     monElem.style.left = this.largeur + "px";
@@ -49,7 +45,7 @@ class postIt {
                     monElem.style.backgroundColor = this.couleur;
                     monElem.style.padding = "5px";
                     monElem.style.color = "black";
-                    monElem.innerHTML = "Je suis un objet de test, j'avance à " + this.vitesse + " Vroum";
+                    monElem.innerHTML = "Je suis un objet de test";
                     document.body.appendChild(monElem);
                     monElem.style.backgroundRepeat = "no-repeat";
                     monElem.style.backgroundSize = "contain";
@@ -63,7 +59,9 @@ class postIt {
                     if (creation) {
                         document.body.appendChild(monElem);
                     }
-                }  
-}   
-    monpostIt = new postIt('red', 100, 200, 'black', '');
+                
+                }
+            }                 
+    monpostIt = new postIt('red', 100, 200, '');
     monpostIt.afficheTest();
+                             
