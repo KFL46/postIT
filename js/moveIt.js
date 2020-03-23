@@ -2,8 +2,8 @@ let moveIt = false;
 let x;
 let y;
 
-let monpostIt = new postIt("", 50, 50, 12);
-monpostIt.afficheTest();
+let monPostIt = new postIt("", 50, 50, 12);
+monPostIt.afficheTest();
 
 document.addEventListener('mousemove', e => {
     x = e.clientX;
@@ -17,8 +17,8 @@ document.addEventListener('mouseup', () => {
 function refresh() {
     if (moveIt) {
         console.log("on déplace !")
-        monpostIt.changePlace(x, y);
-        monpostIt.afficheTest();
+        monPostIt.changePlace(x, y);
+        monPostIt.afficheTest();
     }
     setTimeout(refresh, 300)
 }

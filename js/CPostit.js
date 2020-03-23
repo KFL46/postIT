@@ -1,36 +1,43 @@
 class postIt {
-            couleur;
-            largeur;
-            hauteur;
-            text;
-            constructor(couleur, largeur, hauteur, text){
+        couleur;
+        largeur;
+        hauteur;
+        couleurText;
+        texts;
+        vitesse;
+            constructor(couleur, largeur, hauteur, couleurText, texts, vitesse) {
                 this.couleur = couleur;
                 this.largeur = largeur;
                 this.hauteur = hauteur;
-                this.text = text;
+                this.couleurText = couleurText;
+                this.texts = texts;
+                this.vitesse = vitesse;
             }
-        changePlace(x, y) {
-            this.largeur = x;
-            this.hauteur = y;
-            this.posx = x;
-            this.posy = y;
-        }
-        changeCouleur(coul) {
-            this.couleur=coul;
-        }
+                changeVitesse(vitesse) {
+                this.vitesse = vitesse;
+                }
+                changePlace(x, y) {
+                    this.largeur = x;
+                    this.hauteur = y;
+                    this.posx = x;
+                    this.posy = y;
+                }
+                changeCouleur(coul) {
+                    this.couleur = coul; 
+                }   
                 afficheTest(){
                     let monElem = document.createElement('div')
-                    let monElem;
                     let creation = false;
 
                     //mon postIT existe ?
                     if(document.getElementById("postIt")== null){
+                    //si non, on créé le post it
                         monElem = document.createElement('div');
                         creation = true;
                         }
                     else{
                         //oui on la récupère
-                        console.log(" Mon post It");
+                        console.log(" Mon post It existe");
                         monElem = document.getElementById("postIt");
                         }   
               
@@ -45,23 +52,23 @@ class postIt {
                     monElem.style.backgroundColor = this.couleur;
                     monElem.style.padding = "5px";
                     monElem.style.color = "black";
-                    monElem.innerHTML = "Je suis un objet de test";
+                    monElem.innerHTML = "Je suis un objet de test, j'avance à " + this.vitesse + " Move It";
                     document.body.appendChild(monElem);
                     monElem.style.backgroundRepeat = "no-repeat";
                     monElem.style.backgroundSize = "contain";
 
                     monElem.addEventListener('click', () => {
-                        console.log("moveIt !");
+                        console.log("move it !");
                         moveIt = true;
-                            })
+                        })
                              
                     //Si mon postIt n'existe pas je l'ajoute au html
                     if (creation) {
                         document.body.appendChild(monElem);
-                    }
+                        }
                 
                 }
             }                 
-    monpostIt = new postIt('red', 100, 200, '');
-    monpostIt.afficheTest();
+    monPostIt = new postIt(100, 200, 30, 'red');
+    monPostIt.afficheTest();
                              
