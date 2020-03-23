@@ -1,8 +1,8 @@
-let onBouge = false;
+let moveIt = false;
 let x;
 let y;
 
-let monpostIt = new postIt("voiture.jpg", 50, 50, 12);
+let monpostIt = new postIt("", 50, 50, 12);
 monpostIt.afficheTest();
 
 document.addEventListener('mousemove', e => {
@@ -11,11 +11,11 @@ document.addEventListener('mousemove', e => {
 })
 document.addEventListener('mouseup', () => {
     console.log("on stop !")
-    onBouge = false;
+    moveIt = false;
 })
 
 function refresh() {
-    if (onBouge) {
+    if (moveIt) {
         console.log("on déplace !")
         monpostIt.changePlace(x, y);
         monpostIt.afficheTest();
