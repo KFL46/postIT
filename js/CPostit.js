@@ -17,6 +17,7 @@ class postIt {
             }
                 changeVitesse(vitesse) {
                 this.vitesse = vitesse;
+                
                 }
                 changePlace(x, y) {
                     this.largeur = x;

@@ -19,8 +19,8 @@ document.addEventListener('mouseup', () => {
 document.getElementById('addPostIt').addEventListener('mousedown', () => {
     //idBouge = tabPostIt.length + 1;
     let postIt = new postIt(tabPostit.length + 1, "red", 100, 100, 12)
-    tabPostit.push(postIt);
-    //onBouge = true;
+    tabPos
+    uge = true;
     tabPostit[(tabPostit.length - 1)].afficheTest();
 
 });
