@@ -17,7 +17,7 @@ document.addEventListener('mouseup', () => {
     moveIt = false;
 })
 document.getElementById('addPostIt').addEventListener('mousedown', () => {
-    //idBouge = tabDingo.length + 1;
+    //idBouge = tabPostIt.length + 1;
     let postIt = new postIt(tabPostit.length + 1, "red", 100, 100, 12)
     tabPostit.push(postIt);
     //onBouge = true;

@@ -5,13 +5,15 @@ class postIt {
         couleurText;
         texts;
         vitesse;
-            constructor(couleur, largeur, hauteur, couleurText, texts, vitesse) {
+        addPostIt;
+            constructor(couleur, largeur, hauteur, couleurText, texts, vitesse, addPostIt) {
                 this.couleur = couleur;
                 this.largeur = largeur;
                 this.hauteur = hauteur;
                 this.couleurText = couleurText;
                 this.texts = texts;
                 this.vitesse = vitesse;
+                this.addPostIt = addPostIt;
             }
                 changeVitesse(vitesse) {
                 this.vitesse = vitesse;
