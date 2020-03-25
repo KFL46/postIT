@@ -8,7 +8,7 @@ class postIt {
     addPostIt;
     numero;
 
-    constructor(couleur, largeur, hauteur, couleurText, texts, vitesse, addPostIt, numero) {
+    constructor(numero, couleur, largeur, hauteur, couleurText, texts, vitesse, addPostIt) {
         this.couleur = couleur;
         this.largeur = largeur;
         this.hauteur = hauteur;
@@ -20,6 +20,12 @@ class postIt {
     }
     changeVitesse(vitesse) {
         this.vitesse = vitesse;
+    }
+    / **
+    * Affichage textuel du postIt - Sérialisation du postIt
+    * /
+    toString ( )  {
+        return  '{"x":'  +  ceci . posx  +  ', "y":'  +  ceci . posy  +  '", "vitesse":'  +  this . vitesse  +  '"}'
     }
     changePlace(x, y) {
         this.largeur = x;
@@ -72,6 +78,13 @@ class postIt {
         if (creation) {
             document.body.appendChild(monElem);
         }
-
+        /** 
+         * Suppression du postit
+         * 
+         * @param {string} numPostit - id du postit a supprimer
+         */
+        function delPostit(numPostit) {
+            delete tableauPostit[numPostit - 1]
+        }
     }
 }
