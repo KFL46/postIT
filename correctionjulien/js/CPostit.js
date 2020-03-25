@@ -21,11 +21,11 @@ class postIt {
     changeVitesse(vitesse) {
         this.vitesse = vitesse;
     }
-    / **
-    * Affichage textuel du postIt - Sérialisation du postIt
-    * /
-    toString ( )  {
-        return  '{"x":'  +  ceci . posx  +  ', "y":'  +  ceci . posy  +  '", "vitesse":'  +  this . vitesse  +  '"}'
+    // **
+    //* Affichage textuel du postIt - Sérialisation du postIt
+    //* /
+    toString( )  {
+        return  '{"x":'  +  this.posx  +  ', "y":'  +  this.posy  +  '}'
     }
     changePlace(x, y) {
         this.largeur = x;
@@ -77,14 +77,6 @@ class postIt {
         //Si mon postIt n'existe pas je l'ajoute au html
         if (creation) {
             document.body.appendChild(monElem);
-        }
-        /** 
-         * Suppression du postit
-         * 
-         * @param {string} numPostit - id du postit a supprimer
-         */
-        function delPostit(numPostit) {
-            delete tableauPostit[numPostit - 1]
         }
     }
 }

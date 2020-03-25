@@ -21,7 +21,8 @@ document.getElementById('addPostIt').addEventListener('mousedown', () => {
 
 });
 function refresh() {
-    console.log("postIt à bouger =" + idMove)
+    //console.log("postIt à bouger =" + idMove)
+  
     logMe ( "Sérialisation du contexte:"  +  tabPostit . toString ( ) ,  true )
     if (moveIt && idMove != 0) {
         console.log("on déplace !")
@@ -43,9 +44,9 @@ function refresh() {
         //* @param { boolean } vide - Reinit boite de log
         //* /
         function logMe( texte , vide =  false ) {
-            if  (document . getElementById ( "logMe" ) ! = null )  {
-                if  ( vide )  document . getElementById ( "logMe" ) . innerHTML  =  "" ;
-                document . getElementById ( "logMe" ) . innerHTML  + =  '<br>'  +  texte
+            if(document.getElementById("logMe")!= null)  {
+                if( vide )  document . getElementById( "logMe" ) . innerHTML  =  "" ;
+                document . getElementById ( "logMe" ) . innerHTML  +=  '<br>'  +  texte
             }
 } 
 
