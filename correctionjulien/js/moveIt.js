@@ -19,11 +19,12 @@ document.getElementById('addPostIt').addEventListener('mousedown', () => {
     tabPostit.push(potIt);
     tabPostit[(tabPostit.length - 1)].afficheTest();
 
-});
+})
+
 function refresh() {
     //console.log("postIt à bouger =" + idMove)
   
-    logMe ( "Sérialisation du contexte:"  +  tabPostit . toString ( ) ,  true )
+    logMe("Sérialisation :" + tabPostit.toString( ), true)
     if (moveIt && idMove != 0) {
         console.log("on déplace !")
         tabPostit[(idMove - 1)].changePlace(x, y);
@@ -43,13 +44,12 @@ function refresh() {
         //* @param { string } texte - Texte à logger
         //* @param { boolean } vide - Reinit boite de log
         //* /
-        function logMe( texte , vide =  false ) {
+        function logMe(texts, vide =  false ) {
             if(document.getElementById("logMe")!= null)  {
-                if( vide )  document . getElementById( "logMe" ) . innerHTML  =  "" ;
-                document . getElementById ( "logMe" ) . innerHTML  +=  '<br>'  +  texte
+                if(vide) document.getElementById( "logMe" ) . innerHTML  =  "" ;
+                document.getElementById("logMe").innerHTML += '<br>' + texts
             }
 } 
-
     setTimeout(refresh, 300)
 }
 refresh(); 

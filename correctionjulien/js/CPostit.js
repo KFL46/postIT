@@ -24,8 +24,8 @@ class postIt {
     // **
     //* Affichage textuel du postIt - Sérialisation du postIt
     //* /
-    toString( )  {
-        return  '{"x":'  +  this.posx  +  ', "y":'  +  this.posy  +  '}'
+    toString( ){
+        return'{"coul":' + this.couleur + ',"largeur":' + this.largeur + ', "hauteur":' + this.hauteur + ', "couleurText":' + this.couleurText +',"texts":' + this.texts + ',"vitesse":' + this.vitesse +',}'
     }
     changePlace(x, y) {
         this.largeur = x;
@@ -69,7 +69,7 @@ class postIt {
         monElem.style.backgroundSize = "contain";
 
         monElem.addEventListener('click', () => {
-            console.log("move it ! " + this.numero);
+            console.log("move it !" + this.numero);
             idMove = this.numero;
             moveIt = true;
         })
