@@ -50,6 +50,23 @@ function refresh() {
                 document.getElementById("logMe").innerHTML += '<br>' + texts
             }
 } 
+
     setTimeout(refresh, 300)
+
+    window.onload = () => {
+        tmpTabPost = readCookie("svtabPostit")
+        //  tmpTabPost = (document.cookie.replace(/(?:(?:^|.*;s*)svTabDingo*=s*([^;]*).*$)|^.*$/, '$1'));
+        alert("Voici le contenu de mon cookie : \n" + tmpTabPost + "\n ou \n " + eval(tmpTabPost))
+        tmpTabPost = eval(tmpTabPost)
+        // alert("Voici le contenu de mon cookie : \n" + tmpTabPost + "\n ou \n " + eval(tmpTabPost))
+        for (unPost in tmpTabPost) {
+            //console.log(tmpTabPost[unPost])
+            let postIt = new postIt(tabPostit.length + 1, tmpTabPost[unPost].image, tmpTabPost[unPost].x, tmpTabPost[unPost].y, tmpTabPost[unPost].vitesse)
+            tabPostit.push(postIt);
+            //onBouge = true;
+            tabPostit[(tabPostit.length - 1)].afficheTest();
+        }
+
+    }
 }
 refresh(); 
