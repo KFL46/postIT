@@ -9,13 +9,13 @@ document.addEventListener('mousemove', e => {
     y = e.clientY;
 })
 document.addEventListener('mouseup', () => {
-    console.log("on stop !")
+  //  console.log("on stop !");
     idMove = 0;
     moveIt = false;
 })
 
 document.getElementById('addPostIt').addEventListener('mousedown', () => {
-    console.log("on click")
+  //  console.log("on click");
     let potIt = new postIt(tabPostit.length + 1, "red", 100, 100, 12)
     tabPostit.push(potIt);
     tabPostit[(tabPostit.length - 1)].afficheTest();
@@ -24,20 +24,22 @@ document.getElementById('addPostIt').addEventListener('mousedown', () => {
 
 function refresh() {
   
-   console.log("Sérialisation :" + tabPostit.toString( ), true);
+  // console.log("Sérialisation :" + tabPostit.toString( ), true);
 
     if (moveIt && idMove != 0) {
-        console.log("on déplace !")
+      //  console.log("on déplace !")
         tabPostit[(idMove - 1)].changePlace(x, y);
         tabPostit[(idMove - 1)].afficheTest();
+  
    }
-   console.log("postIt à bouger =" + idMove)
+   //console.log("bouge" + moveIt);
+   //console.log("numero" + idMove);
+   setTimeout(refresh, 300);
+
 
 } 
 
-    setTimeout(refresh, 300);
     refresh(); 
-
     /**
  * Fonction permettant de logger du texte dans un element HTML avec id logMe
  * 
